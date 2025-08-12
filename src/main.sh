@@ -17,3 +17,7 @@ if [ "$1" = "delete" ]; then
  sed -i "/$2/d" notes.txt
  echo "Nota eliminada: $2"
 fi
+
+if [ "$1" = "help" ]; then
+ echo "Uso: $0 [add|list|delete|help]"
+fi
