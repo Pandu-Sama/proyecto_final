@@ -20,4 +20,5 @@ fi
  
 if [ "$1" = "help" ]; then
  echo "Comandos: add, list, delete, help"
+ echo "Uso: $0 [add|list|delete|help]"
 fi
