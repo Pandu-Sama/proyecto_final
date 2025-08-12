@@ -24,6 +24,11 @@ if [ "$1" = "help" ]; then
 fi
 
 if [ "$1" = "clear" ]; then
- > notes.txt
- echo "Todas las notas eliminadas"
+ read -p "¿Seguro que quieres eliminar todas las notas? (s/n):"
+ if [ "$confirm" = "s" ]; then
+  > notes.txt
+  echo "Todas las notas eliminadas"
+ else
+  echo "Operaciòn cancelada"
+ fi
 fi
