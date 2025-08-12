@@ -12,3 +12,7 @@ fi
  fi
 fi
 
+if [ "$1" = "delete" ]; then
+ echo "Eliminando nota: $2"
+ sed -i "/$2/d" notes.txt
+fi
