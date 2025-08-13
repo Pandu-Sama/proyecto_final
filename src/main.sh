@@ -19,11 +19,20 @@ if [ "$1" = "delete" ]; then
 fi
  
 if [ "$1" = "help" ]; then
- echo "Comandos: add, list, delete, help"
- echo "Uso: $0 [add|list|delete|help]"
+ echo "Comandos Disponibles"
+ echo " add <nota>	- Añade una nota"
+ echo " list 		- Muestra todas las notas"
+ echo " delete <nota>	- Elimina una nota"
+ echo " clear		- Elimina todas las notas"
+ echo " help 		- Muestra esta ayuda"
 fi
 
 if [ "$1" = "clear" ]; then
- > notes.txt
- echo "Todas las notas eliminadas"
+ read -p "¿Seguro que quieres eliminar todas las notas? (s/n):"
+ if [ "$confirm" = "s" ]; then
+  > notes.txt
+  echo "Todas las notas eliminadas"
+ else
+  echo "Operaciòn cancelada"
+ fi
 fi
